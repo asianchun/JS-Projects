@@ -1,0 +1,129 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: monospace;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(
+    to right,
+    hsl(200, 100%, 50%),
+    hsl(175, 100%, 50%)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+.clock::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  border-radius: 50%;
+  z-index: 11;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number {
+  --degree: 0;
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: rotate(var(--degree));
+}
+
+.number1 {
+  --degree: 30deg;
+}
+
+.number2 {
+  --degree: 60deg;
+}
+
+.number3 {
+  --degree: 90deg;
+}
+
+.number4 {
+  --degree: 120deg;
+}
+
+.number5 {
+  --degree: 150deg;
+}
+
+.number6 {
+  --degree: 180deg;
+}
+
+.number7 {
+  --degree: 210deg;
+}
+
+.number8 {
+  --degree: 240deg;
+}
+
+.number9 {
+  --degree: 270deg;
+}
+
+.number10 {
+  --degree: 300deg;
+}
+
+.number11 {
+  --degree: 330deg;
+}
+
+.hand {
+  --rotation: 0;
+
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  border: 1px solid white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: 10;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.second {
+  width: 3px;
+  height: 45%;
+  background-color: red;
+}
+
+.minute {
+  width: 7px;
+  height: 40%;
+  background-color: black;
+}
+
+.hour {
+  width: 10px;
+  height: 35%;
+  background-color: black;
+}
