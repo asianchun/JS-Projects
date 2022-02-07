@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="index.js" defer></script>
+    <title>Tabs</title>
+  </head>
+  <body>
+    <ul class="navigation">
+      <li data-target="#home" class="active">Home</li>
+      <li data-target="#pricing">Pricing</li>
+      <li data-target="#about">About</li>
+    </ul>
+
+    <div class="tab">
+      <div id="home" data-content class="active">
+        <h1>Home</h1>
+        <p>This is the home page</p>
+      </div>
+      <div id="pricing" data-content>
+        <h1>Pricing</h1>
+        <p>This is the pricing page</p>
+      </div>
+      <div id="about" data-content>
+        <h1>About</h1>
+        <p>This is the about page</p>
+      </div>
+    </div>
+  </body>
+</html>
