@@ -1,0 +1,34 @@
+[data-expandable] [data-expand-text] {
+  --line-height: 1.5;
+  --lines-to-show: 3;
+  position: relative;
+  box-sizing: border-box;
+  line-height: var(--line-height);
+  overflow: hidden;
+  height: calc(var(--line-height) * var(--lines-to-show) * 1em);
+}
+
+[data-expandable].expanded [data-expand-text] {
+  height: initial;
+}
+
+[data-overflow="false"] [data-expand-text] {
+  height: initial;
+}
+
+[data-overflow="false"] [data-expand-button] {
+  display: none;
+}
+
+[data-expandable] [data-expand-text]::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, transparent, white);
+}
+
+[data-overflow="false"] [data-expand-text]::before,
+[data-expandable].expanded [data-expand-text]::before {
+  background: initial;
+}
