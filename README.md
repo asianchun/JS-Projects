@@ -28,8 +28,10 @@ Check out the live demo of the JS Projects [here](#).
    - Select what you want in your password and generate it
 - Janken
    - Rock, Paper, Scissors
--  Clock
+- Clock
    - A simple clock
+- Password strength
+   - Checks the strength of the password
 - Expandable content
    - Content that can expand
 - Form validation
