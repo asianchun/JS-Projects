@@ -12,7 +12,7 @@ Welcome to a collection of JavaScript projects! You will find 13 various project
 
 ## Demo
 
-Check out the live demo of the Hangman Game [here](#).
+Check out the live demo of the JS Projects [here](#).
 
 ## Application Descriptions
 
